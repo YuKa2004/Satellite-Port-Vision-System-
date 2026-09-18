@@ -6,6 +6,9 @@ This repository contains a full Computer Vision pipeline built to simulate a spa
 
 The system is designed to process a 2D image of a "satellite port" consisting of concentric squares (the port boundary) and a solid circular marker (an orientation vector). 
 
+<img width="573" height="537" alt="image" src="https://github.com/user-attachments/assets/59d9f28a-2e57-4a6d-8c62-2306db9b8ee3" />
+
+
 The pipeline solves four core spatial challenges:
 1. **Rotation Angle Recovery**: Calculate the exact rotation angle of an arriving spacecraft. The system extracts the spatial vector between the geometric center of the port (found via Canny edge detection) and the circular marker (isolated via Morphological Opening).
 2. **Visual Servoing (PTZ Camera Tracking)**: Given an arbitrarily cropped view of the port where the marker is completely off-screen, the system mathematically calculates the "phantom" target coordinate and outputs discrete Pan and Tilt camera commands to step the camera until the target is visible.
